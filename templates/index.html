@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendation Engine</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style1.css')}}">
+</head>
+<body>
+
+    <nav class="navbar">
+        <img src="static/images/logo.png" class="brand-logo" alt="logo">
+        <ul class="nav-links">
+            <li class="nav-items"><a href="#">TV</a></li>
+            <li class="nav-items"><a href="#">Movies</a></li>
+            <li class="nav-items"><a href="#">Sports</a></li>
+        </ul>
+
+        <div class="right-container">
+            <form action="{{url_for('giveRec')}}" method="post" class="form" id="form">
+            <input type="text" class="search-bar" id="search-bar" name="search-bar">
+            <button class="search-btn" id="search-btn" type="submit">Search</button></form>
+            <button class="login"><a href="#" class="alogin">{{movie}}</a></button>
+        </div>
+    </nav>
+
+<div id="main">
+    <div class="carousel-container">
+        <div class="carousel">
+            
+        </div>
+    </div>
+
+    <!--SEARCH RESULTS-->
+    <h1 class="title">Search Results</h1>
+    <div class="movies-list">
+        <button class="prev-btn"><img src="static/images/pre.png" alt=""></button>
+        <button class="next-btn"><img src="static/images/nxt.png" alt=""></button>
+
+        <div class="s-card-cont" id="s-card-cont">
+
+        </div>
+
+    </div>
+
+    <!--MYSTERY-->
+    <h1 class="title">Mystery</h1>
+    <div class="movies-list">
+        <button class="prev-btn"><img src="static/images/pre.png" alt=""></button>
+        <button class="next-btn"><img src="static/images/nxt.png" alt=""></button>
+
+        <div class="v-card-cont" id="v-card-cont">
+
+        </div>
+
+    </div>
+
+    <!--FAMILY-->
+    <h1 class="title">Family</h1>
+    <div class="movies-list">
+        <button class="prev-btn"><img src="static/images/pre.png" alt=""></button>
+        <button class="next-btn"><img src="static/images/nxt.png" alt=""></button>
+
+        <div class="a-card-cont" id="a-card-cont">
+            
+        </div>
+
+    </div>
+
+    <!--THRILLER-->
+    <h1 class="title">Thriller</h1>
+    <div class="movies-list">
+        <button class="prev-btn"><img src="static/images/pre.png" alt=""></button>
+        <button class="next-btn"><img src="static/images/nxt.png" alt=""></button>
+
+        <div class="t-card-cont" id="t-card-cont">
+            
+        </div>
+
+    </div>
+
+    <!--HORROR-->
+    <h1 class="title">Horror</h1>
+    <div class="movies-list">
+        <button class="prev-btn"><img src="static/images/pre.png" alt=""></button>
+        <button class="next-btn"><img src="static/images/nxt.png" alt=""></button>
+
+        <div class="d-card-cont" id="d-card-cont">
+            
+        </div>
+
+    </div>
+
+    <script src="{{url_for('static',filename='javascript/data.js')}}"></script>
+    <script src="{{url_for('static',filename='javascript/script.js')}}"></script>
+    
+</div>
+</body>
+</html>
